@@ -1,0 +1,40 @@
+/* package whatever; // don't place package name! */
+     
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+     
+/* Name of the class has to be "Main" only if the class is public. */
+class Ideone
+{
+    public static void main (String[] args) throws java.lang.Exception
+    {
+        int x = (int) Math.floor(Math.random()*10) + 1;
+        int y = (int) Math.floor(Math.random()*10) + 1;
+        double grid[][] = new double[y][x];
+        int userX = (int) Math.floor(Math.random()*x) + 1;
+        int userY = (int) Math.floor(Math.random()*y) + 1;
+     
+        System.out.printf("x is %d, y is %d, User is at %d, %d\n\n", x, y, userX, userY);
+     
+        for (int i = 0; i < grid.length; i++)
+        {
+        	for (int k = 0; k < grid[i].length; k++)
+            {
+            	if (i == (userY - 1))
+            	{
+                	if (k == (userX - 1))
+                		System.out.print("X");
+                	else
+                		System.out.print("O");
+                }
+                
+                else
+                	System.out.print("O");
+     
+                if (k == (x - 1))
+                	System.out.println();
+            }
+        }
+    }
+}
